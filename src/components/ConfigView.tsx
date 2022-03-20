@@ -23,7 +23,7 @@ export default function ConfigView({ binds, className }: Props) {
 	}, [binds]);
 
 	const copyToClipboard = () => {
-		navigator.clipboard.writeText('exec source-modifier-commands.cfg;');
+		navigator.clipboard.writeText('exec source-keybind-config.cfg;');
 	};
 	return (
 		<>
@@ -35,7 +35,7 @@ export default function ConfigView({ binds, className }: Props) {
 					<SyntaxHighlighter text={text} />
 				</code>
 				<a
-					download='source-modifier-commands.cfg'
+					download='source-keybind-config.cfg'
 					href={'data:,' + encodeURIComponent(appendInfoToConfig(text, url))}
 				>
 					<Button
@@ -55,7 +55,7 @@ export default function ConfigView({ binds, className }: Props) {
 						<li>Add the following line to your autoexec</li>
 						<div className='flex'>
 							<code className='bg-gray-100 rounded p-2 block w-full'>
-								exec source-modifier-commands.cfg;
+								exec source-keybind-config.cfg;
 							</code>
 							{/* <Button name={<CopyIcon width='20' height='20' />} onClick={copyToClipboard} /> */}
 						</div>

@@ -42,7 +42,7 @@ function addReleaseCommands(commands: string[]) {
 
 export function appendInfoToConfig(config: string, url: string) {
 	let text = '';
-	text += '// Generated using https://jackhugh.github.io/source-keybind-config\n\n';
+	text += '// Generated using https://github.com/jackhugh/source-keybind-config\n\n';
 	text += '// Edit this config using the link below\n';
 	text += `// ${url}\n\n`;
 	text += config;
